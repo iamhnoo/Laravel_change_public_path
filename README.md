@@ -37,5 +37,5 @@ mix.setPublicPath('../public_html/')
 ```
 # หมายเหตุ 
     - *!* = ยกเลิกแล้ว
-    - กรณี serve on dev ให้ทำถึง ข้อ 9
+    - กรณี serve on dev ให้ทำถึง ข้อ 6
 ```
