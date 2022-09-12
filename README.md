@@ -4,7 +4,7 @@
 2- create new folder next-to `public_html` and name it `laravel-core`.  
 3- move all files and folders except `.public_html, .idea, .git, .gitattributes, .gitignore` into `laravel-core` folder.  
 4- edit `index.php` in `public_html` folder and change `__DIR__.'/../` to `__DIR__.'/../laravel-core/`. (2 case)  
-5- edit `server.php` in `laravel-core` folder and change `/public` to `/../public_html`. (2 case)  
+!*! 5- edit `server.php` in `laravel-core` folder and change `/public` to `/../public_html`. (2 case)  
 6- edit `AppServiceProviver.php` and add below code in `register` method:  
 ```php
 $this->app->bind('path.public', function() {
@@ -28,9 +28,14 @@ mix.setPublicPath('../public_html/')
 /public_html
   /index.php
 /laravel-core
-  /server.php
+  *!* /server.php
   /webpack.mix.js
   /app
     /Providers
       /AppServiceProviver.php
+```
+```
+# หมายเหตุ 
+    - *!* = ยกเลิกแล้ว
+    - กรณี serve on dev ให้ทำถึง ข้อ 9
 ```
